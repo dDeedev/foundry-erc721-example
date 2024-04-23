@@ -10,7 +10,7 @@ error MaxSupply();
 error NonExistentTokenURI();
 error WithdrawTransfer();
 
-contract SmitivejNFT is ERC721, Ownable {
+contract MyNFT is ERC721, Ownable {
     using Strings for uint256;
 
     string private _baseTokenURI;
