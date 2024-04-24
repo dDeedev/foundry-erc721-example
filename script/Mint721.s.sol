@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// PX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
 import "forge-std/Script.sol";
@@ -18,7 +18,7 @@ contract MintScript is Script {
     function run() external {
         vm.startBroadcast();
         // Explicitly cast the address to MyNFT type using the payable keyword if needed
-        SmitivejNFT nft = SmitivejNFT(payable(nftContractAddress));
+        MyNFT nft = MyNFT(payable(nftContractAddress));
         nft.safeMint(ownerAddress);
         vm.stopBroadcast();
     }
