@@ -1,13 +1,9 @@
-# Sample Hardhat Project
+# SCRIPT
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+```bash
+forge script script/DeployERC721.s.sol:MyScript --rpc-url $RPC_URL --private-key $PRIVATE_KEY --etherscan-api-key $ETHERSCAN_API_KEY --verifier-url $VERIFIER_URL --broadcast --optimize --verify
+```
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
+```bash
+forge verify-contract --etherscan-api-key "myapi" --verifier-url $VERIFIER_URL 0x2c63b220c6827dffe7aa365934e448e790ef12bb ./src/My721A.sol:My721A
 ```

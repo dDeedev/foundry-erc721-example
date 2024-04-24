@@ -18,7 +18,7 @@ contract MintScript is Script {
     function run() external {
         vm.startBroadcast();
         // Explicitly cast the address to MyNFT type using the payable keyword if needed
-        MyNFT nft = MyNFT(payable(nftContractAddress));
+        SmitivejNFT nft = SmitivejNFT(payable(nftContractAddress));
         nft.safeMint(ownerAddress);
         vm.stopBroadcast();
     }
